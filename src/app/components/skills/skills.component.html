@@ -1,0 +1,24 @@
+<section class="section-about">
+    <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+            DEVELOPER SKILLS
+        </h2>
+    </div>
+
+    <div class="row">
+        <div class="col-1-of-2">
+            <!-- <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3> -->
+            <app-dynamic *ngIf="this.arrBooleans[0]"></app-dynamic>>
+            <app-pie *ngIf="this.arrBooleans[1]"></app-pie>
+            <app-bubble *ngIf="this.arrBooleans[2]"></app-bubble>
+
+        </div>
+        <div class="col-1-of-2">
+            <div class="composition">
+                <img (click)="setArrBooleans(0)" src="../../../assets/img/circle.png" alt="Photo 1" class="composition__photo composition__photo--p1">
+                <img (click)="setArrBooleans(1)" src="../../../assets/img/pent.png" alt="Photo 2" class="composition__photo composition__photo--p2">
+                <img (click)="setArrBooleans(2)" src="../../../assets/img/circle.png" alt="Photo 3" class="composition__photo composition__photo--p3">
+            </div>
+        </div>
+    </div>
+</section>

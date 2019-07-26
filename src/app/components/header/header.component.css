@@ -1,0 +1,195 @@
+.header {
+    height: 85vh;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../../../assets/img/dream-dev.jpg);
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../../assets/img/dream-dev.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        height: 95vh;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+only screen and (min-width: 125em) {
+    .header {
+        background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../../../assets/img/dream-dev.jpg);
+        background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../../assets/img/dream-dev.jpg);
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+}
+
+
+/* LOGO */
+
+.logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.logo {
+    height: 3.5rem;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+}
+
+.logo-text:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);*/
+}
+
+.logo-text::after {
+    content: "Contact me";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 50px;
+    left: -210px;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.logo-text:hover::after {
+    left: 30px;
+}
+
+
+/* CONTENT IN THE CENTER */
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    -webkit-animation-name: moveInLeft;
+    animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-primary-main {
+        letter-spacing: 1rem;
+        font-family: 5rem;
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    -webkit-animation: moveInRight 1s ease-in;
+    animation: moveInRight 1s ease-in;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-primary-sub {
+        letter-spacing: .5rem;
+    }
+}
+
+
+/* TEXT CHANGING */
+
+#fluid-text {
+    margin-top: 100px;
+    color: #fff;
+    font-size: 3.625em;
+    line-height: 1.45em;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: .1em;
+    width: 100%;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .15);
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) rotate(-50deg);
+    }
+    60% {
+        transform: rotate(120deg);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
