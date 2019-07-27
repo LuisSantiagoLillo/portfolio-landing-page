@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Angular Form
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 // ng2-CHARTS
 import { ChartsModule } from 'ng2-charts';
@@ -19,6 +21,7 @@ import { PolarAreaComponent } from './components/charts/polar-area/polar-area.co
 import { BarComponent } from './components/charts/bar/bar.component';
 import { DynamicComponent } from './components/charts/dynamic/dynamic.component';
 import { BubbleComponent } from './components/charts/bubble/bubble.component';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 
 
 
@@ -34,11 +37,13 @@ import { BubbleComponent } from './components/charts/bubble/bubble.component';
     PolarAreaComponent,
     BarComponent,
     DynamicComponent,
-    BubbleComponent
+    BubbleComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ChartsModule
   ],
   providers: [],

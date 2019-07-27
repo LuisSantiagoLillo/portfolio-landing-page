@@ -7,46 +7,59 @@
                     </video>
     </div>
 
-
-
     <div class="row">
         <div class="story">
+            <!--
             <figure class="story__shape">
                 <img src="../../../assets/img/email.png" alt="Send a message" class="story__img">
                 <figcaption class="story__caption">{{send_message}}</figcaption>
             </figure>
+            -->
             <div class="story__text">
                 <div class="u-center-text u-margin-bottom-medium">
                     <h2 class="heading-secondary">
                         Get in touch
                     </h2>
                     <h3 class="heading-tertiary u-margin-bottom-small">Have a question or want to work together?</h3>
+                    <app-social-media></app-social-media>
 
                 </div>
                 <br>
+                <!-- (ngSubmit)="addMessage(forma)" -->
+                <form #forma="ngForm" novalidate="false" class="contact100-form validate-form">
 
-                <form class="contact100-form validate-form">
 
                     <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+                        <div class="alert alert-success" *ngIf="alertName" role="alert">
+                            Sorry, but the name is required.
+                        </div>
                         <span class="label-input100">Your Name</span>
-                        <input class="input100" type="text" name="name" placeholder="Enter your name">
+                        <input required [(ngModel)]="report.nombre" id="name" #name="ngModel" class="input100" type="text" name="name" placeholder="Enter your name">
                         <span class="focus-input100"></span>
                     </div>
+
 
                     <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <div class="alert alert-success" *ngIf="alertEmail" role="alert">
+                            Check the email please, I'll need this field to answer you.
+                        </div>
                         <span class="label-input100">Email</span>
-                        <input class="input100" type="text" name="email" placeholder="Enter your email addess">
+                        <input required [(ngModel)]="report.email" id="email" #email="ngModel" class="input100" type="text" name="email" placeholder="Enter your email addess">
                         <span class="focus-input100"></span>
                     </div>
 
+
                     <div class="wrap-input100 validate-input" data-validate="Message is required">
+                        <div class="alert alert-success" *ngIf="alertMessage" role="alert">
+                            No message? Just say hi and the rest will be itself.
+                        </div>
                         <span class="label-input100">Message</span>
-                        <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+                        <textarea required class="input100" name="message" id="message" [(ngModel)]="report.message" #message="ngModel" placeholder="Your message here..."></textarea>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="container-contact100-form-btn">
-                        <button class="contact100-form-btn">
+                        <button class="contact100-form-btn" type="button" (click)="addMessage(forma)">
                         <span>
                           Submit
                           <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
