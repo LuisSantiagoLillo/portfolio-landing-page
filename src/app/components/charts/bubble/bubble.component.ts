@@ -31,7 +31,7 @@ export class BubbleComponent implements OnInit {
     }
   };
   public bubbleChartType: ChartType = 'bubble';
-  public bubbleChartLegend = true;
+  public bubbleChartLegend = false;
 
   public bubbleChartData: ChartDataSets[] = [
     {

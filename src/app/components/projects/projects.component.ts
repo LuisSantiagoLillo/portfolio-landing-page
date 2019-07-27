@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  firstPorfolio_likes: number = 10;
+
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  giveLike(project) {
+    if (project === 'myPortfolio') {
+      console.log(project);
+    }
   }
 
 }

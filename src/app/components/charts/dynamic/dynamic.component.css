@@ -1,0 +1,25 @@
+.color_front {
+    color: #F48FB1;
+}
+
+.color_back {
+    color: #1ab7ea;
+}
+
+strong {
+    color: #55c57a;
+    display: inline-block;
+    transition: all .2s;
+    text-decoration: none;
+}
+
+.infite {
+    transform: scale(1.4);
+}
+
+strong:hover,
+strong:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    /* transform: rotate(5deg) scale(1.3); */
+    transform: rotate(5deg) scale(2);
+}
