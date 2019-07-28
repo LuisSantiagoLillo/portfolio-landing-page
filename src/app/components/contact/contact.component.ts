@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm} from '@angular/forms';
+import { NgForm, Validators} from '@angular/forms';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 
 @Component({
@@ -16,11 +17,20 @@ report: Mensaje = {
 };
 // ********
   send_message = 'Send a message';
-  alertTime = 4000;
+  alertTime = 5000;
   alertName = false;
   alertEmail = false;
   alertMessage = false;
-  constructor() { }
+  alertConnection = false;
+  alertSuccesfull = false;
+
+  private itemsCollection: AngularFirestoreCollection<Mensaje>;
+
+  constructor(
+    private afs: AngularFirestore
+  ) {
+    this.itemsCollection = this.afs.collection<Mensaje>('portafolio');
+  }
 
   ngOnInit() {
   }
@@ -47,16 +57,14 @@ report: Mensaje = {
         message: this.report.message
       };
       console.log(mensaje);
-      /*
       return this.itemsCollection.add( mensaje )
         .then(() => {
-          this.showError('Thanks, your message has been sent successfully.', 'success');
+          this.showAlertSuccesfull();
           forma.resetForm();
         })
         .catch((err) => {
-          this.showError(err , 'danger');
+          this.showAlertConnection();
         });
-        */
     } else {
 
     }
@@ -80,6 +88,20 @@ report: Mensaje = {
     this.alertMessage = true;
     setTimeout(() => {
       this.alertMessage = false;
+    }, this.alertTime);
+  }
+
+  showAlertConnection() {
+    this.alertConnection = true;
+    setTimeout(() => {
+      this.alertConnection = false;
+    }, this.alertTime);
+  }
+
+  showAlertSuccesfull() {
+    this.alertSuccesfull = true;
+    setTimeout(() => {
+      this.alertSuccesfull = false;
     }, this.alertTime);
   }
 } // FIN

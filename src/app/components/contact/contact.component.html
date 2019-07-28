@@ -25,6 +25,12 @@
 
                 </div>
                 <br>
+                <div class="alert alert-success" *ngIf="alertConnection" role="alert">
+                    Sorry, connection has been rejected I can't receibe your message in this moment. Try it later.
+                </div>
+                <div class="alert alert-success" *ngIf="alertSuccesfull" role="alert">
+                    GREAT!, thanks for your message, I'll try to answer you as soon as possible.
+                </div>
                 <!-- (ngSubmit)="addMessage(forma)" -->
                 <form #forma="ngForm" novalidate="false" class="contact100-form validate-form">
 
@@ -44,7 +50,7 @@
                             Check the email please, I'll need this field to answer you.
                         </div>
                         <span class="label-input100">Email</span>
-                        <input required [(ngModel)]="report.email" id="email" #email="ngModel" class="input100" type="text" name="email" placeholder="Enter your email addess">
+                        <input required [(ngModel)]="report.email" id="email" #email="ngModel" class="input100" type="email" name="email" placeholder="Enter your email address">
                         <span class="focus-input100"></span>
                     </div>
 

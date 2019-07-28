@@ -105,6 +105,22 @@
 }
 
 
+/*[ ALERT ]*/
+
+.alert {
+    padding: 10px;
+}
+
+.alert-success {
+    background: #55c57a;
+    color: #fff;
+}
+
+.email-patter {
+    color: red;
+}
+
+
 /*[ Input ]*/
 
 .wrap-input100 {
