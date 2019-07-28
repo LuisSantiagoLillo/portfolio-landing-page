@@ -25,18 +25,22 @@ report: Mensaje = {
   ngOnInit() {
   }
 
-  addMessage( forma: NgForm) {
+  addMessage(forma: NgForm) {
+    let err = false;
     if (this.report.nombre === '' || this.report.nombre === ' ') {
+      err = true;
       this.showAlertName();
     }
     if (this.report.email === '' || this.report.email === ' ') {
+      err = true;
       this.showAlertEmail();
     }
     if (this.report.message === '' || this.report.message === ' ') {
+      err = true;
       this.showAlertMessage();
     }
 
-    if (forma.valid) {
+    if (!err && forma.valid) {
       const mensaje: Mensaje = {
         nombre: this.report.nombre,
         email: this.report.email,

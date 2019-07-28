@@ -27,6 +27,7 @@ Dark green: #28b485
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 75em) {
@@ -46,6 +47,21 @@ html {
         font-size: 75%;
     }
 }
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(16, 124, 16, 0.6);
+    border-radius: 5px;
+}
+
+
+/* ****************** */
 
 body {
     -webkit-box-sizing: border-box;

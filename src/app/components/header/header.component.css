@@ -51,7 +51,8 @@ only screen and (min-width: 125em) {
     letter-spacing: 0.2rem;
     text-decoration: none;
     display: inline-block;
-    transition: all .2s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
 .logo-text:hover {
