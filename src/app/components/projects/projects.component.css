@@ -131,8 +131,8 @@
 }
 
 .card__picture--1 {
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../../../assets/img/last_portfolio.png);
-    background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../../assets/img/last_portfolio.png);
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../../../assets/img/dreams.png);
+    background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../../assets/img/dreams.png);
 }
 
 .card__picture--2 {
