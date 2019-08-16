@@ -29,6 +29,9 @@ import { BarComponent } from './components/charts/bar/bar.component';
 import { DynamicComponent } from './components/charts/dynamic/dynamic.component';
 import { BubbleComponent } from './components/charts/bubble/bubble.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { PieTextComponent } from './components/descriptions/pie-text/pie-text.component';
+import { DynamicTextComponent } from './components/descriptions/dynamic-text/dynamic-text.component';
+import { BubbleTextComponent } from './components/descriptions/bubble-text/bubble-text.component';
 
 
 
@@ -45,7 +48,10 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     BarComponent,
     DynamicComponent,
     BubbleComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    PieTextComponent,
+    DynamicTextComponent,
+    BubbleTextComponent
   ],
   imports: [
     BrowserModule,

@@ -31,22 +31,37 @@ export class BubbleComponent implements OnInit {
     }
   };
   public bubbleChartType: ChartType = 'bubble';
-  public bubbleChartLegend = false;
+  public bubbleChartLegend = true;
 
   public bubbleChartData: ChartDataSets[] = [
     {
       data: [
-        { x: 10, y: 10, r: 10 },
-        { x: 15, y: 5, r: 15 },
-        { x: 26, y: 12, r: 23 },
-        { x: 7, y: 8, r: 8 },
+        { x: 26, y: 20, r: 35 }
       ],
-      label: 'Series A',
+      label: 'IONIC',
+      /*
+      backgroundColor: 'green',
+      borderColor: 'blue',
+      hoverBackgroundColor: 'purple',
+      hoverBorderColor: 'red',
+      */
+    },
+    {
+      data: [
+        { x: 20, y: 10, r: 25 }
+      ],
+      label: 'PWA',
       backgroundColor: 'green',
       borderColor: 'blue',
       hoverBackgroundColor: 'purple',
       hoverBorderColor: 'red',
     },
+    {
+      data: [
+        { x: 5, y: 5, r: 10 }
+      ],
+      label: 'Flutter',
+    }
   ];
 
   public bubbleChartColors: Color[] = [
