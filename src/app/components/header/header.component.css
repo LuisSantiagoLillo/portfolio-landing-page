@@ -94,7 +94,7 @@ only screen and (min-width: 125em) {
     color: #fff;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
 }
 
 .heading-primary-main {
@@ -108,10 +108,12 @@ only screen and (min-width: 125em) {
     animation-duration: 1s;
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    margin-top: 5rem;
 }
 
 @media only screen and (max-width: 37.5em) {
     .heading-primary-main {
+        margin-top: 8rem;
         letter-spacing: 1rem;
         font-family: 5rem;
     }
@@ -119,7 +121,7 @@ only screen and (min-width: 125em) {
 
 .heading-primary-sub {
     display: block;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     -webkit-animation: moveInRight 1s ease-in;
@@ -132,6 +134,20 @@ only screen and (min-width: 125em) {
     }
 }
 
+#message {
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: .5rem;
+    -webkit-animation: moveInRight 1s ease-in;
+    animation: moveInRight 1s ease-in;
+}
+
+@media only screen and (max-width: 37.5em) {
+    #message {
+        letter-spacing: .1rem;
+    }
+}
 
 /* TEXT CHANGING */
 
