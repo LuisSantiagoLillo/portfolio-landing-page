@@ -17,10 +17,15 @@
             -->
             <div class="story__text">
                 <div class="u-center-text u-margin-bottom-medium">
-                    <h2 class="heading-secondary">
+                    <h2 class="heading-secondary" data-aos="fade-up">
                         Get in touch
                     </h2>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Have a question or want to work together?</h3>
+                    <h3 class="heading-tertiary u-margin-bottom-small"
+                        data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        Have a question or want to work together?
+                    </h3>
                     <!-- SOCIAL MEDIA COMPONENT -->
                     <!-- <app-social-media></app-social-media> -->
                     <app-social-media-pro></app-social-media-pro>
@@ -36,7 +41,8 @@
                     GREAT!, thanks for your message, I'll try to answer you as soon as possible.
                 </div>
                 <!-- (ngSubmit)="addMessage(forma)" -->
-                <form #forma="ngForm" novalidate="false" class="contact100-form validate-form">
+                <form #forma="ngForm" novalidate="false" class="contact100-form validate-form"
+                data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
 
 
                     <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">

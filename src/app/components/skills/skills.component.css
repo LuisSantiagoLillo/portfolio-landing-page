@@ -10,6 +10,7 @@
     }
 }
 
+/* HEADER DEVELOPER SKILLS */
 .heading-secondary {
     font-size: 3.5rem;
     text-transform: uppercase;
@@ -27,8 +28,12 @@
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+
+/* COMPOSITION OF PICTURES */
 .composition {
     position: relative;
+    -webkit-animation: moveInRight 1s ease-in;
+    animation: moveInRight 1s ease-in;
 }
 
 .composition__photo {
