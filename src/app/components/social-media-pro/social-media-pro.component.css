@@ -19,7 +19,7 @@
   .icon i{
     line-height: 9rem;
     font-size: 3.5rem;
-    transition: 0.2s;
+    transition: 0.8s;
   }
   .icon:hover i{
     transform: scale(1.3);
