@@ -32,6 +32,7 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
 import { PieTextComponent } from './components/descriptions/pie-text/pie-text.component';
 import { DynamicTextComponent } from './components/descriptions/dynamic-text/dynamic-text.component';
 import { BubbleTextComponent } from './components/descriptions/bubble-text/bubble-text.component';
+import { SocialMediaProComponent } from './components/social-media-pro/social-media-pro.component';
 
 
 
@@ -51,7 +52,8 @@ import { BubbleTextComponent } from './components/descriptions/bubble-text/bubbl
     SocialMediaComponent,
     PieTextComponent,
     DynamicTextComponent,
-    BubbleTextComponent
+    BubbleTextComponent,
+    SocialMediaProComponent
   ],
   imports: [
     BrowserModule,
